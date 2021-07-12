@@ -1,6 +1,8 @@
 import java.util.List;
+import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class FunctionalUtility {
     /*
@@ -9,7 +11,11 @@ public class FunctionalUtility {
 
 
     TriFunction<List<Drug>,Integer,String,List<Integer>> listOfKYearsThatHighlyOrderMDrug=
-            (drugs, topKyear, s) -> drugs.stream().flatMap(drug->drug.getDrugOrderList().stream()).
-                    filter(drugOrder -> drugOrder.getDrug().equals(s)).
-                    sorted((getDrug1,getDrug2)->getDrug2.getVisit().getVisitDate().getYear()-get)
+            (drugs, topKyear, drugName) ->drugs.stream().
+                    filter(drug->drug.getDrugName().equals(drugName)).
+                    flatMap(drug->drug.getDrugOrderList().stream()).
+                    map(drugOrder->drugOrder.getVisit()).
+
+                    collect(Collectors.groupingBy(visit->visit.getVisitDate())).entrySet().stream()
+
 }
