@@ -2,6 +2,9 @@ import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,8 +21,10 @@ class FunctionalUtilityTest {
     List<Symptom> symptomList;
     List<Drug> drugList;
 
-    Patient patient1, patient2, patient3, patient4, patient5, patient6, patient7, patient8, patient9, patient10;
     Role doctor, laboratorist, receptionist, systemAdmin;
+    User user1,user2,user3,user4,user5,user6,user7,user8,user9,user10,user11,user12,user13,user14;
+    Patient patient1, patient2, patient3, patient4, patient5, patient6, patient7, patient8, patient9, patient10;
+
 
     LabTestType saliva, urinalysis, blood, hemoglobin, liverPanel, endoscopy, std, dna, corona;
     LabResult positive, negative;
@@ -30,6 +35,53 @@ class FunctionalUtilityTest {
 
     @Before
     public void setUp(){
+
+        // create role
+        doctor=new Role("doctor");
+        laboratorist=TestFactory.createRole("laboratorist");
+        receptionist=TestFactory.createRole("receptionst");
+        systemAdmin=TestFactory.createRole("system admin");
+
+
+        // create user
+
+u
+
+        user1=TestFactory.createUser("Daniel","Fitsum",
+                "Abrha","Male","dabrha@miu.edu","123456789","Chercher",
+                LocalDateTime.of(1990,02,25,1,1,1),"",""
+                ,Arrays.asList(new Role[]{doctor,systemAdmin}));
+
+        user2=TestFactory.createUser("Kidst","Tsegay",
+                "Mezigebe","Female","ktsegay@miu.edu","123456789","Mekele",
+                LocalDateTime.of(1990,02,25,1,1,1),"",""
+                ,Arrays.asList(new Role[]{receptionist}));
+
+        user3=TestFactory.createUser("Weldemicheal","Hailu",
+                "Birhanu","Male","whailu@miu.edu","123456789","Dengolate",
+                LocalDateTime.of(1990,02,25,1,1,1),"",""
+                ,Arrays.asList(new Role[]{systemAdmin}));
+
+        user3=TestFactory.createUser("Abebe","Abrha",
+                "Tekle","Male","aabrha@miu.edu","123456789","Kuha",
+                LocalDateTime.of(1990,02,25,1,1,1),"",""
+                ,Arrays.asList(new Role[]{laboratorist}));
+
+        user4=TestFactory.createUser("Gizachew","Mekonen",
+                "Birhane","Male","gmokenen@miu.edu","123456789","Tilili",
+                LocalDateTime.of(1990,02,25,1,1,1),"",""
+                ,Arrays.asList(new Role[]{doctor,systemAdmin}));
+
+        user5=TestFactory.createUser("Mahder","Fitsum",
+                "Abrha","Female","mabrha@miu.edu","123456789","Chercher",
+                LocalDateTime.of(1990,02,25,1,1,1),"",""
+                ,Arrays.asList(new Role[]{receptionist}));
+
+        user6=TestFactory.createUser("Yared","Fitsum",
+                "Abrha","Male","yabrha@miu.edu","123456789","Dergaejen",
+                LocalDateTime.of(1990,02,25,1,1,1),"",""
+                ,Arrays.asList(new Role[]{doctor}));
+
 
         //create Patient
         patient1 = TestFactory.createPatient("Weldmicheal", "Hailu", "Berhanu", "male", "mich@miu.edu", "12345", )
