@@ -18,6 +18,12 @@ public class Drug {
         this.drugName = drugName;
         this.drugCode = drugCode;
     }
+    public Drug(String drugName, String drugCode,User user) {
+        this.drugName = drugName;
+        this.drugCode = drugCode;
+        this.user=user;
+        this.drugOrderList=new ArrayList<>();
+    }
 
     public Drug() {
     }

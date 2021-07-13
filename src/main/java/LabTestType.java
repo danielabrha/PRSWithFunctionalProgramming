@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class LabTestType {
@@ -17,6 +18,14 @@ public class LabTestType {
     public LabTestType(String labTestName, String labTestCode) {
         this.labTestName = labTestName;
         this.labTestCode = labTestCode;
+        this.user=new User();
+        this.labOrderList=new ArrayList<>();
+    }
+    public LabTestType(String labTestName, String labTestCode,User user) {
+        this.labTestName = labTestName;
+        this.labTestCode = labTestCode;
+        this.user=user;
+        this.labOrderList=new ArrayList<>();
     }
 
     public LabTestType() {

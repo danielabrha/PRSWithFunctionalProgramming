@@ -11,6 +11,12 @@ public class LabOrder {
         this.labTestType = labTestType;
         this.user = user;
     }
+    public LabOrder( Visit visit, LabTestType labTestType, User user) {
+        this.visit = visit;
+        this.labResult = new LabResult();
+        this.labTestType = labTestType;
+        this.user = user;
+    }
 
     public LabOrder() {
     }
