@@ -22,9 +22,12 @@ public class Visit {
         this.user = user;
     }
 
-    public Visit(LocalDateTime visitDate) {
+    public Visit(LocalDateTime visitDate,Patient patient,User user) {
         this.visitDate = visitDate;
+        this.patient=patient;
+        this.user=user;
     }
+
 
     public Visit() {
     }
