@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -29,11 +30,10 @@ class FunctionalUtilityTest {
     Symptom chestPain, bloodStool, diarrhea, cough, dizziness, headache, vomiting, soreThroat, numbness, pelvicPain;
 
     @Before
-    public void setUp(){
+    public void setUp() {
 
         //create Patient
-        patient1 = TestFactory.createPatient("Weldmicheal", "Hailu", "Berhanu", "male", "mich@miu.edu", "12345", )
-
+        patient1 = TestFactory.createPatient("Weldmicheal", "Hailu", "Berhanu", "male", "mich@miu.edu", "12345", "Miu", LocalDateTime.of(2015, 07, 29, 19,30, 40), 1000);
 
 
         //create labTestType
@@ -52,14 +52,14 @@ class FunctionalUtilityTest {
         negative = TestFactory.createLabResult("negative", lab02, user2);
 
         //create Drug
-        atorvastatin =TestFactory.createDrug("atorvastatin", "atorABC", user);
-        levothyroxine =TestFactory.createDrug("levothyroxine", "levoABC", user);
-        lisinopril =TestFactory.createDrug("lisinopril", "lisiABC", user);
-        metformin =TestFactory.createDrug("metformin", "metfABC", user);
-        amlodipine =TestFactory.createDrug("amlodipine", "amlodABC", user);
-        metoprolol =TestFactory.createDrug("metoprolol", "metoABC", user);
-        albuterol =TestFactory.createDrug("albuterol", "albtABC", user);
-        omeprazole =TestFactory.createDrug("omeprazole", "omepABC", user);
+        atorvastatin = TestFactory.createDrug("atorvastatin", "atorABC", user);
+        levothyroxine = TestFactory.createDrug("levothyroxine", "levoABC", user);
+        lisinopril = TestFactory.createDrug("lisinopril", "lisiABC", user);
+        metformin = TestFactory.createDrug("metformin", "metfABC", user);
+        amlodipine = TestFactory.createDrug("amlodipine", "amlodABC", user);
+        metoprolol = TestFactory.createDrug("metoprolol", "metoABC", user);
+        albuterol = TestFactory.createDrug("albuterol", "albtABC", user);
+        omeprazole = TestFactory.createDrug("omeprazole", "omepABC", user);
 
         //create Symptom
 
@@ -81,8 +81,9 @@ class FunctionalUtilityTest {
 
 
     }
+
     @Test
-    public void numberOfPatientsWithResultXTest (){
+    public void numberOfPatientsWithResultXTest() {
 
     }
 
