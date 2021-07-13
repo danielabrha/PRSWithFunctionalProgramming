@@ -117,38 +117,38 @@ Visit visit1,visit2,visit3,visit4,visit5,visit6,visit7,visit8,visit9,
         //region create visit
         //region for patient one
         visit1=TestFactory.createVisit(LocalDateTime.of(2011,01,01,1,1,1),patient1,user2);
-        visit2=TestFactory.createVisit(LocalDateTime.of(2012,05,01,1,1,1),patient1,user2);
+        visit2=TestFactory.createVisit(LocalDateTime.of(2011,05,02,1,1,1),patient1,user2);
         visit3=TestFactory.createVisit(LocalDateTime.of(2013,04,01,1,1,1),patient1,user2);
         visit4=TestFactory.createVisit(LocalDateTime.of(2014,03,01,1,1,1),patient1,user2);
         visit5=TestFactory.createVisit(LocalDateTime.of(2015,07,01,1,1,1),patient1,user2);
         //endregion
         //region for patient two
-        visit6=TestFactory.createVisit(LocalDateTime.of(2011,01,01,1,1,1),patient1,user2);
-        visit7=TestFactory.createVisit(LocalDateTime.of(2012,05,01,1,1,1),patient1,user2);
-        visit8=TestFactory.createVisit(LocalDateTime.of(2013,04,01,1,1,1),patient1,user2);
-        visit9=TestFactory.createVisit(LocalDateTime.of(2014,03,01,1,1,1),patient1,user2);
-        visit10=TestFactory.createVisit(LocalDateTime.of(2015,07,01,1,1,1),patient1,user2);
+        visit6=TestFactory.createVisit(LocalDateTime.of(2011,01,01,1,1,1),patient2,user2);
+        visit7=TestFactory.createVisit(LocalDateTime.of(2012,05,01,1,1,1),patient2,user2);
+        visit8=TestFactory.createVisit(LocalDateTime.of(2013,04,01,1,1,1),patient2,user2);
+        visit9=TestFactory.createVisit(LocalDateTime.of(2014,03,01,1,1,1),patient2,user2);
+        visit10=TestFactory.createVisit(LocalDateTime.of(2015,07,01,1,1,1),patient2,user2);
         //endregion
         //region for patient three
-        visit11=TestFactory.createVisit(LocalDateTime.of(2011,01,01,1,1,1),patient1,user2);
-        visit12=TestFactory.createVisit(LocalDateTime.of(2012,05,01,1,1,1),patient1,user2);
-        visit13=TestFactory.createVisit(LocalDateTime.of(2013,04,01,1,1,1),patient1,user2);
-        visit14=TestFactory.createVisit(LocalDateTime.of(2014,03,01,1,1,1),patient1,user2);
-        visit15=TestFactory.createVisit(LocalDateTime.of(2015,07,01,1,1,1),patient1,user2);
+        visit11=TestFactory.createVisit(LocalDateTime.of(2011,01,01,1,1,1),patient3,user2);
+        visit12=TestFactory.createVisit(LocalDateTime.of(2012,05,01,1,1,1),patient3,user2);
+        visit13=TestFactory.createVisit(LocalDateTime.of(2013,04,01,1,1,1),patient3,user2);
+        visit14=TestFactory.createVisit(LocalDateTime.of(2014,03,01,1,1,1),patient3,user2);
+        visit15=TestFactory.createVisit(LocalDateTime.of(2015,07,01,1,1,1),patient3,user2);
         //endregion
         //region for patient four
-        visit16=TestFactory.createVisit(LocalDateTime.of(2011,01,01,1,1,1),patient1,user2);
-        visit17=TestFactory.createVisit(LocalDateTime.of(2012,05,01,1,1,1),patient1,user2);
-        visit18=TestFactory.createVisit(LocalDateTime.of(2013,04,01,1,1,1),patient1,user2);
-        visit19=TestFactory.createVisit(LocalDateTime.of(2014,03,01,1,1,1),patient1,user2);
-        visit20=TestFactory.createVisit(LocalDateTime.of(2015,07,01,1,1,1),patient1,user2);
+        visit16=TestFactory.createVisit(LocalDateTime.of(2011,01,01,1,1,1),patient4,user2);
+        visit17=TestFactory.createVisit(LocalDateTime.of(2012,05,01,1,1,1),patient4,user2);
+        visit18=TestFactory.createVisit(LocalDateTime.of(2013,04,01,1,1,1),patient4,user2);
+        visit19=TestFactory.createVisit(LocalDateTime.of(2014,03,01,1,1,1),patient4,user2);
+        visit20=TestFactory.createVisit(LocalDateTime.of(2015,07,01,1,1,1),patient4,user2);
         //endregion
         //region for patient five
-        visit21=TestFactory.createVisit(LocalDateTime.of(2011,01,01,1,1,1),patient1,user2);
-        visit22=TestFactory.createVisit(LocalDateTime.of(2012,05,01,1,1,1),patient1,user2);
-        visit23=TestFactory.createVisit(LocalDateTime.of(2013,04,01,1,1,1),patient1,user2);
-        visit24=TestFactory.createVisit(LocalDateTime.of(2014,03,01,1,1,1),patient1,user2);
-        visit25=TestFactory.createVisit(LocalDateTime.of(2015,07,01,1,1,1),patient1,user2);
+        visit21=TestFactory.createVisit(LocalDateTime.of(2011,01,01,1,1,1),patient5,user2);
+        visit22=TestFactory.createVisit(LocalDateTime.of(2012,05,01,1,1,1),patient5,user2);
+        visit23=TestFactory.createVisit(LocalDateTime.of(2013,04,01,1,1,1),patient5,user2);
+        visit24=TestFactory.createVisit(LocalDateTime.of(2014,03,01,1,1,1),patient5,user2);
+        visit25=TestFactory.createVisit(LocalDateTime.of(2015,07,01,1,1,1),patient5,user2);
         //endregion
         //endregion
 
