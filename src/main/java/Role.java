@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Role {
@@ -12,6 +13,7 @@ public class Role {
 
     public Role(String roleName) {
         this.roleName = roleName;
+        this.userList=new ArrayList<>();
     }
 
     public Role() {

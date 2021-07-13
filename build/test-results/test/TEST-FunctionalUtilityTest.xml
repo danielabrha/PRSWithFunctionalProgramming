@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FunctionalUtilityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-12T23:30:22" hostname="DESKTOP-VHLSD9V" time="0.023">
+<testsuite name="FunctionalUtilityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-13T02:23:05" hostname="DESKTOP-HMHH3AB" time="0.018">
   <properties/>
-  <testcase name="numberOfPatientsWithResultXTest()" classname="FunctionalUtilityTest" time="0.023"/>
+  <testcase name="numberOfPatientsWithResultXTest()" classname="FunctionalUtilityTest" time="0.018"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
