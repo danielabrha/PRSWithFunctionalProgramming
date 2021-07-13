@@ -34,7 +34,7 @@ class FunctionalUtilityTest {
     Symptom chestPain, bloodStool, diarrhea, cough, dizziness, headache, vomiting, soreThroat, numbness, pelvicPain;
 
     @Before
-    public void setUp(){
+    public void setUp() {
 
         // create role
         doctor=new Role("doctor");
@@ -45,7 +45,7 @@ class FunctionalUtilityTest {
 
         // create user
 
-u
+
 
         user1=TestFactory.createUser("Daniel","Fitsum",
                 "Abrha","Male","dabrha@miu.edu","123456789","Chercher",
@@ -84,9 +84,33 @@ u
 
 
         //create Patient
-        patient1 = TestFactory.createPatient("Weldmicheal", "Hailu", "Berhanu", "male", "mich@miu.edu", "12345", )
+        patient1 = TestFactory.createPatient("John", "Smith", "Williams", "male", "mich@miu.edu", "12345", "Miu",
+                LocalDateTime.of(1989, 07, 29, 19,30, 40), 1000);
 
+        patient2 = TestFactory.createPatient("Anna", "park", "drake", "female", "annaf@miu.edu", "12345", "Miu",
+                LocalDateTime.of(2010, 07, 17, 19,30, 40), 1001);
 
+        patient3 = TestFactory.createPatient("Joseph", "burce", "Lee", "male", "joseph@miu.edu", "12345", "Miu",
+                LocalDateTime.of(1970, 05, 13, 19,30, 40), 1002);
+
+        patient4 = TestFactory.createPatient("Lia", "kizmak", "Berhanu", "female", "liaki@miu.edu", "01245", "Miu",
+                LocalDateTime.of(1999, 01, 11, 19,30, 40), 1003);
+
+        patient5 = TestFactory.createPatient("Tibony", "mazuk", "kish", "female", "tibony@miu.edu", "123450", "Miu",
+                LocalDateTime.of(1972, 12, 9, 19,30, 40), 1004);
+
+        patient6 = TestFactory.createPatient("Tekeste", "shabro", "bon", "male", "tekesteb@miu.edu", "01212345", "Miu",
+                LocalDateTime.of(1960, 04, 25, 19,30, 40), 1005);
+        patient7 = TestFactory.createPatient("doni", "shamak", "tedi", "female", "donis@miu.edu", "9812345", "Miu",
+                LocalDateTime.of(1990, 06, 20, 19,30, 40), 1006);
+        patient8 = TestFactory.createPatient("Mariamawi", "Demesko", "Abrha", "female", "mariad@miu.edu", "1230945",
+                "Miu",
+                LocalDateTime.of(1965, 07, 29, 19,30, 40), 1007);
+
+        patient9 = TestFactory.createPatient("Tesfay", "Bekru", "tsega", "male", "tesfb@miu.edu", "1234095", "Miu",
+                LocalDateTime.of(2007, 10, 25, 19,30, 40), 1008);
+        patient10 = TestFactory.createPatient("Ajai", "Fantu", "siru", "male", "ajaf@miu.edu", "10802345",
+                "Miu", LocalDateTime.of(2001, 07, 14, 19,30, 40), 1009);
 
         //create labTestType
         saliva = TestFactory.createLabTestType("saliva", "sal123", use1);
@@ -104,14 +128,14 @@ u
         negative = TestFactory.createLabResult("negative", lab02, user2);
 
         //create Drug
-        atorvastatin =TestFactory.createDrug("atorvastatin", "atorABC", user);
-        levothyroxine =TestFactory.createDrug("levothyroxine", "levoABC", user);
-        lisinopril =TestFactory.createDrug("lisinopril", "lisiABC", user);
-        metformin =TestFactory.createDrug("metformin", "metfABC", user);
-        amlodipine =TestFactory.createDrug("amlodipine", "amlodABC", user);
-        metoprolol =TestFactory.createDrug("metoprolol", "metoABC", user);
-        albuterol =TestFactory.createDrug("albuterol", "albtABC", user);
-        omeprazole =TestFactory.createDrug("omeprazole", "omepABC", user);
+        atorvastatin = TestFactory.createDrug("atorvastatin", "atorABC", user);
+        levothyroxine = TestFactory.createDrug("levothyroxine", "levoABC", user);
+        lisinopril = TestFactory.createDrug("lisinopril", "lisiABC", user);
+        metformin = TestFactory.createDrug("metformin", "metfABC", user);
+        amlodipine = TestFactory.createDrug("amlodipine", "amlodABC", user);
+        metoprolol = TestFactory.createDrug("metoprolol", "metoABC", user);
+        albuterol = TestFactory.createDrug("albuterol", "albtABC", user);
+        omeprazole = TestFactory.createDrug("omeprazole", "omepABC", user);
 
         //create Symptom
 
@@ -133,8 +157,9 @@ u
 
 
     }
+
     @Test
-    public void numberOfPatientsWithResultXTest (){
+    public void numberOfPatientsWithResultXTest() {
 
     }
 
