@@ -45,9 +45,9 @@ Visit visit1,visit2,visit3,visit4,visit5,visit6,visit7,visit8,visit9,
         systemAdmin = TestFactory.createRole("system admin");
 
 
-        // create user
 
 
+        //region create user
         user1 = TestFactory.createUser("Daniel", "Fitsum",
                 "Abrha", "Male", "dabrha@miu.edu", "123456789", "Chercher",
                 LocalDateTime.of(1990, 02, 25, 1, 1, 1), "", ""
@@ -63,10 +63,6 @@ Visit visit1,visit2,visit3,visit4,visit5,visit6,visit7,visit8,visit9,
                 LocalDateTime.of(1990, 02, 25, 1, 1, 1), "", ""
                 , Arrays.asList(new Role[]{systemAdmin}));
 
-        user3 = TestFactory.createUser("Abebe", "Abrha",
-                "Tekle", "Male", "aabrha@miu.edu", "123456789", "Kuha",
-                LocalDateTime.of(1990, 02, 25, 1, 1, 1), "", ""
-                , Arrays.asList(new Role[]{laboratorist}));
 
         user4 = TestFactory.createUser("Gizachew", "Mekonen",
                 "Birhane", "Male", "gmokenen@miu.edu", "123456789", "Tilili",
@@ -83,7 +79,12 @@ Visit visit1,visit2,visit3,visit4,visit5,visit6,visit7,visit8,visit9,
                 LocalDateTime.of(1990, 02, 25, 1, 1, 1), "", ""
                 , Arrays.asList(new Role[]{doctor}));
 
+        user7 = TestFactory.createUser("Abebe", "Abrha",
+                "Tekle", "Male", "aabrha@miu.edu", "123456789", "Kuha",
+                LocalDateTime.of(1990, 02, 25, 1, 1, 1), "", ""
+                , Arrays.asList(new Role[]{laboratorist}));
 
+//endregion
         //region create Patient
         patient1 = TestFactory.createPatient("John", "Smith", "Williams", "male", "mich@miu.edu", "12345", "Miu",
                 LocalDateTime.of(1989, 07, 29, 19, 30, 40), 1000);
@@ -153,32 +154,32 @@ Visit visit1,visit2,visit3,visit4,visit5,visit6,visit7,visit8,visit9,
         //endregion
 
 
-        //create labTestType
-        saliva = TestFactory.createLabTestType("saliva", "sal123", use1);
-        urinalysis = TestFactory.createLabTestType("urinalysis", "u123", user1);
-        blood = TestFactory.createLabTestType("blood", "bld123", user1);
-        hemoglobin = TestFactory.createLabTestType("hemoglobin", "hemg123", user1);
-        liverPanel = TestFactory.createLabTestType("liverPanel", "liv123", user1);
-        endoscopy = TestFactory.createLabTestType("endoscopy", "end123", user1);
-        std = TestFactory.createLabTestType("std", "std123", user1);
-        dna = TestFactory.createLabTestType("dna", "dna123", user1);
-        corona = TestFactory.createLabTestType("corona", "cor123", user1);
-
+        //region create labTestType
+        saliva = TestFactory.createLabTestType("saliva", "sal123", user3);
+        urinalysis = TestFactory.createLabTestType("urinalysis", "u123", user3);
+        blood = TestFactory.createLabTestType("blood", "bld123", user3);
+        hemoglobin = TestFactory.createLabTestType("hemoglobin", "hemg123", user3);
+        liverPanel = TestFactory.createLabTestType("liverPanel", "liv123", user3);
+        endoscopy = TestFactory.createLabTestType("endoscopy", "end123", user3);
+        std = TestFactory.createLabTestType("std", "std123", user3);
+        dna = TestFactory.createLabTestType("dna", "dna123", user3);
+        corona = TestFactory.createLabTestType("corona", "cor123", user3);
+        //endregion
         // create LabResult
         positive = TestFactory.createLabResult("positive", lab01, user1);
         negative = TestFactory.createLabResult("negative", lab02, user2);
 
-        //create Drug
-        atorvastatin = TestFactory.createDrug("atorvastatin", "atorABC", user);
-        levothyroxine = TestFactory.createDrug("levothyroxine", "levoABC", user);
-        lisinopril = TestFactory.createDrug("lisinopril", "lisiABC", user);
-        metformin = TestFactory.createDrug("metformin", "metfABC", user);
-        amlodipine = TestFactory.createDrug("amlodipine", "amlodABC", user);
-        metoprolol = TestFactory.createDrug("metoprolol", "metoABC", user);
-        albuterol = TestFactory.createDrug("albuterol", "albtABC", user);
-        omeprazole = TestFactory.createDrug("omeprazole", "omepABC", user);
+        //region create Drug
+        atorvastatin = TestFactory.createDrug("atorvastatin", "atorABC", user3);
+        levothyroxine = TestFactory.createDrug("levothyroxine", "levoABC", user3);
+        lisinopril = TestFactory.createDrug("lisinopril", "lisiABC", user3);
+        metformin = TestFactory.createDrug("metformin", "metfABC", user3);
+        amlodipine = TestFactory.createDrug("amlodipine", "amlodABC", user3);
+        metoprolol = TestFactory.createDrug("metoprolol", "metoABC", user3);
+        albuterol = TestFactory.createDrug("albuterol", "albtABC", user3);
+        omeprazole = TestFactory.createDrug("omeprazole", "omepABC", user3);
 
-        //create Symptom
+        //endregion create Symptom
 
 
         chestPain = TestFactory.createSymptom("chestPain", visit1, user);
