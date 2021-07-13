@@ -24,6 +24,11 @@ public abstract class TestFactory {
     static public LabResult createLabResult(String labResultName, LabOrder labOrder, User user) {
         return new LabResult(labResultName, labOrder, user);
     }
+    static public LabResult assignLabResult(LabResult labResult, LabOrder labOrder, User user){
+        labResult.setLabOrder(labOrder);
+        labResult.setUser(user);
+        return labResult;
+    }
 
     static public LabOrder createLabOrder(Visit visit, LabTestType labTestType, User user) {
         return new LabOrder(visit, labTestType, user);
